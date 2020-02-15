@@ -1,28 +1,44 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Home v-if="view === 'home'" @generate-set="setConfig"/>
+    <SetView
+      :config="config"
+      v-if="view === 'set-view'"
+      @close="showView('home')"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Home from "./components/Home.vue"
+import SetView from "./components/SetView.vue"
 
 export default {
-  name: 'App',
+  name: "App",
+  data () {
+    return {
+      view: "set-view",
+      config: {}
+    };
+  },
   components: {
-    HelloWorld
+    Home,
+    SetView
+  },
+  methods: {
+    setConfig (config) {
+      this.config = config;
+      this.showView('set-view');
+    },
+    showView (view) {
+      this.view = view;
+    }
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  body {
+    background: #292C33;
+    color: white;
+  }
 </style>
