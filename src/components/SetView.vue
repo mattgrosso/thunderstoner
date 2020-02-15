@@ -26,7 +26,9 @@
     },
     methods: {
       generateSet () {
-        console.log("this.randomSeedCard(cards): ", this.randomSeedCard(cards));
+        console.log("this.getRandomMonsterGroup(): ", this.getRandomMonsterGroup());
+        console.log("this.getRandomHeroGroup(): ", this.getRandomHeroGroup());
+        console.log("this.getRandomVillageCard(): ", this.getRandomVillageCard());
       },
       randomSeedCard (branch) {
         if (Array.isArray(branch)) {
@@ -37,6 +39,15 @@
           const subBranch = branch[this.randomKey(branch)]
           return this.randomSeedCard(subBranch);
         }
+      },
+      getRandomMonsterGroup () {
+        return cards.monsters[this.randomKey(cards.monsters)];
+      },
+      getRandomHeroGroup () {
+        return cards.heroes[this.randomKey(cards.heroes)];
+      },
+      getRandomVillageCard () {
+        return this.randomValue(cards.villages);
       },
       randomKey (object) {
         return this.randomValue(Object.keys(object));
