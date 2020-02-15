@@ -16,8 +16,12 @@ export default {
   name: "App",
   data () {
     return {
-      view: "set-view",
-      config: {}
+      view: "home",
+      config: {
+        heroes: 5,
+        villages: 13,
+        monsters: 10
+      }
     };
   },
   components: {
@@ -26,7 +30,7 @@ export default {
   },
   methods: {
     setConfig (config) {
-      this.config = config;
+      this.config = { ...this.config, ...config };
       this.showView('set-view');
     },
     showView (view) {

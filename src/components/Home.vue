@@ -1,7 +1,7 @@
 <template>
   <div class="preference-form">
     <p>Make some choices.</p>
-    <input v-model="config.input" type="text">
+    <input v-model="config.heroes" type="text">
     <button @click="generateSet">Generate Set</button>
   </div>
 </template>
@@ -11,13 +11,12 @@
    data () {
      return {
        config: {
-         input: ""
+         heroes: ""
        }
      };
    },
     methods: {
       generateSet () {
-        console.log("this.config: ", this.config);
         this.$emit("generate-set", this.config);
       }
     }
