@@ -1,6 +1,7 @@
 export const heroes = {
   heroes: {
-    Aeon: {
+    aeon: {
+      heroGroup: true,
       level1: {
         title: "Lesser Aeon Priest",
         group: "Aeon",
@@ -73,7 +74,8 @@ export const heroes = {
         set: "Numenera"
       }
     },
-    Aird: {
+    aird: {
+      heroGroup: true,
       level1: {
         title: "Aird Cutpurse",
         group: "Aird",
@@ -140,7 +142,8 @@ export const heroes = {
         set: "ToR"
       }
     },
-    Armsman: {
+    armsman: {
+      heroGroup: true,
       level1: {
         title: "Armsman Bastion",
         group: "Armsman",
@@ -210,7 +213,8 @@ export const heroes = {
         set: "RoC"
       }
     },
-    Bhoidwood: {
+    bhoidwood: {
+      heroGroup: true,
       level1: {
         title: "Bhoidwood Hunter",
         group: "Bhoidwood",
@@ -274,7 +278,8 @@ export const heroes = {
         set: "ToR"
       }
     },
-    Blackhand: {
+    blackhand: {
+      heroGroup: true,
       level1: {
         title: "Blackhand Smuggler",
         group: "Blackhand",
@@ -341,7 +346,8 @@ export const heroes = {
         set: "Start"
       }
     },
-    Blademage: {
+    blademage: {
+      heroGroup: true,
       level1: {
         title: "Blademage Striker",
         group: "Blademage",
@@ -407,7 +413,8 @@ export const heroes = {
         set: "RoC"
       }
     },
-    Blind: {
+    blind: {
+      heroGroup: true,
       level1: {
         title: "Blind Neophyte",
         group: "Blind",
@@ -501,7 +508,8 @@ export const heroes = {
         set: "ItA"
       }
     },
-    Bluefire: {
+    bluefire: {
+      heroGroup: true,
       level1: {
         title: "Bluefire Student",
         group: "Bluefire",
@@ -593,7 +601,8 @@ export const heroes = {
         set: "WC"
       }
     },
-    Caliginite: {
+    caliginite: {
+      heroGroup: true,
       level1: {
         title: "Caliginite Lurker",
         group: "Caliginite",
@@ -660,7 +669,8 @@ export const heroes = {
         set: "ToR"
       }
     },
-    Canon: {
+    canon: {
+      heroGroup: true,
       level1: {
         title: "Canon Devotee",
         group: "Canon",
@@ -728,7 +738,8 @@ export const heroes = {
         set: "Original"
       }
     },
-    Cathedral: {
+    cathedral: {
+      heroGroup: true,
       level1: {
         title: "Cathedral Acolyte",
         group: "Cathedral",
@@ -801,7 +812,8 @@ export const heroes = {
         set: "Start"
       }
     },
-    Chalice: {
+    chalice: {
+      heroGroup: true,
       level1: {
         title: "Chalice Quester",
         group: "Chalice",
@@ -903,7 +915,8 @@ export const heroes = {
         set: "ItA"
       }
     },
-    Charming: {
+    charming: {
+      heroGroup: true,
       level1: {
         title: "Charming",
         group: "Charming",
@@ -976,7 +989,8 @@ export const heroes = {
         set: "Numenera"
       }
     },
-    Clan: {
+    clan: {
+      heroGroup: true,
       level1: {
         title: "Clan Sergeant",
         group: "Clan",
@@ -1068,7 +1082,8 @@ export const heroes = {
         set: "WC"
       }
     },
-    Clever: {
+    clever: {
+      heroGroup: true,
       level1: {
         title: "Clever",
         group: "Clever",
@@ -1134,7 +1149,8 @@ export const heroes = {
         set: "Numenera"
       }
     },
-    Criochan: {
+    criochan: {
+      heroGroup: true,
       level1: {
         title: "Criochan Sergeant",
         group: "Criochan",
@@ -1192,7 +1208,8 @@ export const heroes = {
         set: "ToR"
       }
     },
-    Dark: {
+    dark: {
+      heroGroup: true,
       level1: {
         title: "Dark Animator",
         group: "Dark",
@@ -1280,7 +1297,8 @@ export const heroes = {
         set: "WC"
       }
     },
-    Deepstrider: {
+    deepstrider: {
+      heroGroup: true,
       level1: {
         title: "Deepstrider Sentry",
         group: "Deepstrider",
@@ -1344,7 +1362,8 @@ export const heroes = {
         set: "ToR"
       }
     },
-    Diin: {
+    diin: {
+      heroGroup: true,
       level1: {
         title: "Diin Illusionist",
         group: "Diin",
@@ -1405,7 +1424,8 @@ export const heroes = {
         set: "Original"
       }
     },
-    Disowned: {
+    disowned: {
+      heroGroup: true,
       level1: {
         title: "Disowned Berserker",
         group: "Disowned",
@@ -1478,7 +1498,8 @@ export const heroes = {
         set: "CoB"
       }
     },
-    Divine: {
+    divine: {
+      heroGroup: true,
       level1: {
         title: "Divine Healer",
         group: "Divine",
@@ -1583,7 +1604,8 @@ export const heroes = {
         set: "WC"
       }
     },
-    Drua: {
+    drua: {
+      heroGroup: true,
       level1: {
         title: "Drua Sacrist",
         group: "Drua",
@@ -1657,7 +1679,8 @@ export const heroes = {
         set: "ToR"
       }
     },
-    Elf: {
+    elf: {
+      heroGroup: true,
       level1: {
         title: "Elf Wizard",
         group: "Elf",
@@ -1724,7 +1747,8 @@ export const heroes = {
         set: "Original"
       }
     },
-    Feayn: {
+    feayn: {
+      heroGroup: true,
       level1: {
         title: "Feayn class",
         group: "Feayn",
@@ -1795,7 +1819,8 @@ export const heroes = {
         set: "Original"
       }
     },
-    Forcemage: {
+    forcemage: {
+      heroGroup: true,
       level1: {
         title: "Forcemage class",
         group: "Forcemage",
@@ -1862,7 +1887,8 @@ export const heroes = {
         set: "CoB"
       }
     },
-    Garrison: {
+    garrison: {
+      heroGroup: true,
       level1: {
         title: "Garrison Page",
         group: "Garrison",
@@ -1926,7 +1952,8 @@ export const heroes = {
         set: "Start"
       }
     },
-    Glamercast: {
+    glamercast: {
+      heroGroup: true,
       level1: {
         title: "Glamercast Troubadour",
         group: "Glamercast",
@@ -1999,7 +2026,8 @@ export const heroes = {
         set: "ToR"
       }
     },
-    Gohlen: {
+    gohlen: {
+      heroGroup: true,
       level1: {
         title: "Gohlen Trapper",
         group: "Gohlen",
@@ -2093,7 +2121,8 @@ export const heroes = {
         set: "WC"
       }
     },
-    Graceful: {
+    graceful: {
+      heroGroup: true,
       level1: {
         title: "Graceful",
         group: "Graceful",
@@ -2161,7 +2190,8 @@ export const heroes = {
         set: "Numenera"
       }
     },
-    Grim: {
+    grim: {
+      heroGroup: true,
       level1: {
         title: "Grim Blade",
         group: "Grim",
@@ -2249,7 +2279,8 @@ export const heroes = {
         set: "ItA"
       }
     },
-    Harruli: {
+    harruli: {
+      heroGroup: true,
       level1: {
         title: "Harruli Initiate",
         group: "Harruli",
@@ -2341,7 +2372,8 @@ export const heroes = {
         set: "WC"
       }
     },
-    Honormain: {
+    honormain: {
+      heroGroup: true,
       level1: {
         title: "Honormain Gallant",
         group: "Honormain",
@@ -2416,7 +2448,8 @@ export const heroes = {
         set: "RoC"
       }
     },
-    Intelligent: {
+    intelligent: {
+      heroGroup: true,
       level1: {
         title: "Intelligent",
         group: "Intelligent",
@@ -2489,7 +2522,8 @@ export const heroes = {
         set: "Numenera"
       }
     },
-    Isri: {
+    isri: {
+      heroGroup: true,
       level1: {
         title: "Isri Thrower",
         group: "Isri",
@@ -2584,7 +2618,8 @@ export const heroes = {
         set: "WC"
       }
     },
-    Krell: {
+    krell: {
+      heroGroup: true,
       level1: {
         title: "Krell Warrior",
         group: "Krell",
@@ -2668,7 +2703,8 @@ export const heroes = {
         set: "Original"
       }
     },
-    Learned: {
+    learned: {
+      heroGroup: true,
       level1: {
         title: "Learned",
         group: "Learned",
@@ -2738,7 +2774,8 @@ export const heroes = {
         set: "Numenera"
       }
     },
-    Lorigg: {
+    lorigg: {
+      heroGroup: true,
       level1: {
         title: "Lorigg Thief",
         group: "Lorigg",
@@ -2830,7 +2867,8 @@ export const heroes = {
         set: "ItA"
       }
     },
-    Lurker: {
+    lurker: {
+      heroGroup: true,
       level1: {
         title: "Lurker Footpad",
         group: "Lurker",
@@ -2894,7 +2932,8 @@ export const heroes = {
         set: "Original"
       }
     },
-    Magehunter: {
+    magehunter: {
+      heroGroup: true,
       level1: {
         title: "Magehunter Fist",
         group: "Magehunter",
@@ -2961,7 +3000,8 @@ export const heroes = {
         set: "Original"
       }
     },
-    Moonclaw: {
+    moonclaw: {
+      heroGroup: true,
       level1: {
         title: "Moonclaw class",
         group: "Moonclaw",
@@ -3028,7 +3068,8 @@ export const heroes = {
         set: "RoC"
       }
     },
-    Mystic: {
+    mystic: {
+      heroGroup: true,
       level1: {
         title: "Mystic",
         group: "Mystic",
@@ -3098,7 +3139,8 @@ export const heroes = {
         set: "Numenera"
       }
     },
-    Nightblade: {
+    nightblade: {
+      heroGroup: true,
       level1: {
         title: "Nightblade Slasher",
         group: "Nightblade",
@@ -3169,7 +3211,8 @@ export const heroes = {
         set: "Original"
       }
     },
-    Nyth: {
+    nyth: {
+      heroGroup: true,
       level1: {
         title: "Nyth class",
         group: "Nyth",
@@ -3227,7 +3270,8 @@ export const heroes = {
         set: "Original"
       }
     },
-    Outlands: {
+    outlands: {
+      heroGroup: true,
       level1: {
         title: "Outlands Warrior",
         group: "Outlands",
@@ -3318,7 +3362,8 @@ export const heroes = {
         set: "ItA"
       }
     },
-    Patternmage: {
+    patternmage: {
+      heroGroup: true,
       level1: {
         title: "Patternmage Augur",
         group: "Patternmage",
@@ -3399,7 +3444,8 @@ export const heroes = {
         set: "CoB"
       }
     },
-    Phalanx: {
+    phalanx: {
+      heroGroup: true,
       level1: {
         title: "Phalanx Footman",
         group: "Phalanx",
@@ -3448,7 +3494,8 @@ export const heroes = {
         set: "Original"
       }
     },
-    Profaned: {
+    profaned: {
+      heroGroup: true,
       level1: {
         title: "Profaned Acolyte",
         group: "Profaned",
@@ -3526,7 +3573,8 @@ export const heroes = {
         set: "RoC"
       }
     },
-    Rapparee: {
+    rapparee: {
+      heroGroup: true,
       level1: {
         title: "Rapparee Scrounger",
         group: "Rapparee",
@@ -3590,7 +3638,8 @@ export const heroes = {
         set: "CoB"
       }
     },
-    Redblade: {
+    redblade: {
+      heroGroup: true,
       level1: {
         title: "Redblade Killer",
         group: "Redblade",
@@ -3654,7 +3703,8 @@ export const heroes = {
         set: "Original"
       }
     },
-    Regian: {
+    regian: {
+      heroGroup: true,
       level1: {
         title: "Regian class",
         group: "Regian",
@@ -3751,7 +3801,8 @@ export const heroes = {
         set: "ItA"
       }
     },
-    Rugged: {
+    rugged: {
+      heroGroup: true,
       level1: {
         title: "Rugged",
         group: "Rugged",
@@ -3830,7 +3881,8 @@ export const heroes = {
         set: "Numenera"
       }
     },
-    Selurin: {
+    selurin: {
+      heroGroup: true,
       level1: {
         title: "Selurin Magician",
         group: "Selurin",
@@ -3897,7 +3949,8 @@ export const heroes = {
         set: "Original"
       }
     },
-    Silvertongue: {
+    silvertongue: {
+      heroGroup: true,
       level1: {
         title: "Silvertongue Swindler",
         group: "Silvertongue",
@@ -3970,7 +4023,8 @@ export const heroes = {
         set: "RoC"
       }
     },
-    Skinshifter: {
+    skinshifter: {
+      heroGroup: true,
       level1: {
         title: "Skinshifter Clawhand",
         group: "Skinshifter",
@@ -4037,7 +4091,8 @@ export const heroes = {
         set: "CoB"
       }
     },
-    Spellsword: {
+    spellsword: {
+      heroGroup: true,
       level1: {
         title: "Spellsword Venturer",
         group: "Spellsword",
@@ -4109,7 +4164,8 @@ export const heroes = {
         set: "CoB"
       }
     },
-    Stealthy: {
+    stealthy: {
+      heroGroup: true,
       level1: {
         title: "Stealthy",
         group: "Stealthy",
@@ -4182,7 +4238,8 @@ export const heroes = {
         set: "Numenera"
       }
     },
-    Sternnkin: {
+    sternnkin: {
+      heroGroup: true,
       level1: {
         title: "Sternnkin Orcbane",
         group: "Sternnkin",
@@ -4246,7 +4303,8 @@ export const heroes = {
         set: "ToR"
       }
     },
-    Stoneguard: {
+    stoneguard: {
+      heroGroup: true,
       level1: {
         title: "Stoneguard Brute",
         group: "Stoneguard",
@@ -4340,7 +4398,8 @@ export const heroes = {
         set: "WC"
       }
     },
-    Strong: {
+    strong: {
+      heroGroup: true,
       level1: {
         title: "Strong",
         group: "Strong",
@@ -4405,7 +4464,8 @@ export const heroes = {
         set: "Numenera"
       }
     },
-    StrongWilled: {
+    strongwilled: {
+      heroGroup: true,
       level1: {
         title: "Strong-willed",
         group: "Strong-willed",
@@ -4472,7 +4532,8 @@ export const heroes = {
         set: "Numenera"
       }
     },
-    Swift: {
+    swift: {
+      heroGroup: true,
       level1: {
         title: "Swift",
         group: "Swift",
@@ -4548,7 +4609,8 @@ export const heroes = {
         set: "Numenera"
       }
     },
-    Tempest: {
+    tempest: {
+      heroGroup: true,
       level1: {
         title: "Tempest Avenger",
         group: "Tempest",
@@ -4609,7 +4671,8 @@ export const heroes = {
         set: "Original"
       }
     },
-    Thornwood: {
+    thornwood: {
+      heroGroup: true,
       level1: {
         title: "Thornwood Stalker",
         group: "Thornwood",
@@ -4704,7 +4767,8 @@ export const heroes = {
         set: "ItA"
       }
     },
-    Tholis: {
+    tholis: {
+      heroGroup: true,
       level1: {
         title: "Tholis class",
         group: "Tholis",
@@ -4796,7 +4860,8 @@ export const heroes = {
         set: "WC"
       }
     },
-    Thundermage: {
+    thundermage: {
+      heroGroup: true,
       level1: {
         title: "Thundermage Summoner",
         group: "Thundermage",
@@ -4859,7 +4924,8 @@ export const heroes = {
         set: "ToR"
       }
     },
-    Tough: {
+    tough: {
+      heroGroup: true,
       level1: {
         title: "Tough",
         group: "Tough",
@@ -4935,7 +5001,8 @@ export const heroes = {
         set: "Numenera"
       }
     },
-    Tower: {
+    tower: {
+      heroGroup: true,
       level1: {
         title: "Tower Apprentice",
         group: "Tower",
@@ -5002,7 +5069,8 @@ export const heroes = {
         set: "Start"
       }
     },
-    Tuath: {
+    tuath: {
+      heroGroup: true,
       level1: {
         title: "Tuath class",
         group: "Tuath",
@@ -5066,7 +5134,8 @@ export const heroes = {
         set: "CoB"
       }
     },
-    Veilminder: {
+    veilminder: {
+      heroGroup: true,
       level1: {
         title: "Veilminder Martyr",
         group: "Veilminder",
@@ -5133,7 +5202,8 @@ export const heroes = {
         set: "ToR"
       }
     },
-    Verdan: {
+    verdan: {
+      heroGroup: true,
       level1: {
         title: "Verdan Minstrel",
         group: "Verdan",
@@ -5232,7 +5302,8 @@ export const heroes = {
         set: "ItA"
       }
     },
-    Veris: {
+    veris: {
+      heroGroup: true,
       level1: {
         title: "Veris Squire",
         group: "Veris",
@@ -5326,7 +5397,8 @@ export const heroes = {
         set: "ItA"
       }
     },
-    Veteran: {
+    veteran: {
+      heroGroup: true,
       level1: {
         title: "Veteran Warrior",
         group: "Veteran",
@@ -5414,7 +5486,8 @@ export const heroes = {
         set: "Original"
       }
     },
-    Whetmage: {
+    whetmage: {
+      heroGroup: true,
       level1: {
         title: "Whetmage Honer",
         group: "Whetmage",
@@ -5481,7 +5554,8 @@ export const heroes = {
         set: "ToR"
       }
     },
-    Wildwood: {
+    wildwood: {
+      heroGroup: true,
       level1: {
         title: "Wildwood Assailant",
         group: "Wildwood",
@@ -5548,7 +5622,8 @@ export const heroes = {
         set: "Start"
       }
     },
-    Woodfolk: {
+    woodfolk: {
+      heroGroup: true,
       level1: {
         title: "Woodfolk Herbalist",
         group: "Woodfolk",
@@ -5643,7 +5718,8 @@ export const heroes = {
         set: "WC"
       }
     },
-    Woodguard: {
+    woodguard: {
+      heroGroup: true,
       level1: {
         title: "Woodguard Scion",
         group: "Woodguard",
@@ -5722,7 +5798,8 @@ export const heroes = {
         set: "RoC"
       }
     },
-    Xenomorph: {
+    xenomorph: {
+      heroGroup: true,
       level1: {
         title: "Xenomorph Changeling",
         group: "Xenomorph",

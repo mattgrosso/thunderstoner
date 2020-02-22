@@ -12,6 +12,7 @@ module.exports = {
     // 'vue/no-unused-vars': 'error'
     "no-console": "off",
     "no-unused-vars": "warn",
-    "no-debugger": "off"
+    "no-debugger": "off",
+    "no-useless-escape": "off"
   }
 }
