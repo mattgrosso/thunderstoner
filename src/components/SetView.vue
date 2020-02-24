@@ -36,43 +36,103 @@
     },
     methods: {
       generateSet (config) {
-        const runningList = [];
-
-        const heroes = [];
-        const villages = [];
-        const monsters = [];
-        const thunderstoneBearers = [];
+        const set = {
+          heroes: [],
+          villages: [],
+          monsters: [],
+          thunderstoneBearers: []
+        }
         // TODO: Make sure we don't get repeats
         // TODO: Add in a comparison to increase quality
 
-        for (;heroes.length < config.heroes ||
-              villages.length < config.villages ||
-              this.monsterStrength(monsters) < config.monsterValue ||
-              thunderstoneBearers.length < config.thunderstoneBearers
-              ;) {
-          const randomDeck = this.randomSeed();
+        for (;set.heroes.length < config.heroes;) {
+          const hero = this.getRandomHeroGroup();
+          const duplicate = set.heroes.some((each) => each.heroGroup === hero.heroGroup);
 
-          if (this.isHero(randomDeck) && heroes.length < config.heroes) {
-            heroes.push(randomDeck);
-            runningList.push(randomDeck.title);
-          } else if (this.isThunderstoneBearer(randomDeck) && thunderstoneBearers.length < config.thunderstoneBearers) {
-            thunderstoneBearers.push(randomDeck);
-            runningList.push(randomDeck.title);
-          } else if (this.isMonster(randomDeck) && this.monsterStrength(monsters) < config.monsterValue) {
-            monsters.push(randomDeck);
-            runningList.push(randomDeck.title);
-          } else if (villages.length < config.villages) {
-            villages.push(randomDeck);
-            runningList.push(randomDeck.title);
+          if (!duplicate) {
+            set.heroes.push(hero);
+            set.heroes.sort((one, two) => {
+              if (one.heroGroup < two.heroGroup) {
+                return -1;
+              }
+
+              if (one.heroGroup < two.heroGroup) {
+                return 1;
+              }
+
+              if (one.heroGroup == two.heroGroup) {
+                return 0;
+              }
+            });
           }
         }
 
-        const set = {
-          heroes,
-          villages,
-          monsters,
-          thunderstoneBearers
+        for (;set.villages.length < config.villages;) {
+          const village = this.getRandomVillageCard();
+          const duplicate = set.villages.some((each) => each.title === village.title);
+
+          if (!duplicate) {
+            set.villages.push(village);
+            set.villages.sort((one, two) => {
+              if (one.title < two.title) {
+                return -1;
+              }
+
+              if (one.title < two.title) {
+                return 1;
+              }
+
+              if (one.title == two.title) {
+                return 0;
+              }
+            });
+          }
         }
+
+        for (;this.monsterStrength(set.monsters) < config.monsterValue;) {
+          const monster = this.getRandomMonsterGroup();
+          const duplicate = set.monsters.some((each) => each.monsterGroup === monster.monsterGroup);
+
+          if (!duplicate) {
+            set.monsters.push(monster);
+            set.monsters.sort((one, two) => {
+              if (one.monsterGroup < two.monsterGroup) {
+                return -1;
+              }
+
+              if (one.monsterGroup < two.monsterGroup) {
+                return 1;
+              }
+
+              if (one.monsterGroup == two.monsterGroup) {
+                return 0;
+              }
+            });
+          }
+        }
+
+        for (;set.thunderstoneBearers.length < config.thunderstoneBearers;) {
+          const bearer = this.getRandomThunderstoneBearer();
+          const duplicate = set.thunderstoneBearers.some((each) => each.title === bearer.title);
+
+          if (!duplicate) {
+            set.thunderstoneBearers.push(bearer);
+            set.thunderstoneBearers.sort((one, two) => {
+              if (one.title < two.title) {
+                return -1;
+              }
+
+              if (one.title < two.title) {
+                return 1;
+              }
+
+              if (one.title == two.title) {
+                return 0;
+              }
+            });
+          }
+        }
+
         console.log("set: ", set);
       },
       isHero (deck) {
@@ -85,6 +145,9 @@
         return Boolean(deck.monsterGroup);
       },
       monsterStrength (array) {
+        if (!array.length) {
+          return 0;
+        }
         const levels = array.map((monster) => monster.deck[0].level);
 
         return levels.reduce((acc, curr) => acc + curr, 0)
@@ -94,17 +157,15 @@
         const branch = startPoint || cards[cardBranches[Math.floor(Math.random() * cardBranches.length)]];
 
         if (branch.heroGroup) {
-          return {...branch, heroGroup: branch.level1.group, title: branch.level1.group};
+          return {...branch, heroGroup: branch.level1.group};
         } else if (Array.isArray(branch) && branch[0].group && branch[0].group === "Thunderstone Bearer") {
           return {
             monsterGroup: branch[0].group,
-            title: branch[0].group,
             deck: this.randomValue(branch)
           };
         } else if (Array.isArray(branch) && branch[0].group) {
           return {
             monsterGroup: branch[0].group,
-            title: branch[0].group,
             deck: branch
           };
         } else if (Array.isArray(branch)) {
@@ -116,14 +177,25 @@
           return this.randomSeed(subBranch);
         }
       },
-      getRandomMonsterGroup () {
-        return cards.monsters[this.randomKey(cards.monsters)];
-      },
       getRandomHeroGroup () {
-        return cards.heroes[this.randomKey(cards.heroes)];
+        const heroGroup = cards.heroes[this.randomKey(cards.heroes)];
+
+        return {...heroGroup, heroGroup: heroGroup.level1.group};
       },
       getRandomVillageCard () {
         return this.randomValue(cards.villages);
+      },
+      getRandomMonsterGroup () {
+        const monsterGroup = cards.monsters[this.randomKey(cards.monsters)];
+
+        return {
+          monsterGroup: monsterGroup[0].group,
+          level: monsterGroup[0].level,
+          deck: monsterGroup
+        };
+      },
+      getRandomThunderstoneBearer () {
+        return this.randomValue(cards.thunderstoneBearers);
       },
       keywordArrayFor (value) {
         let keywordArray = [];
