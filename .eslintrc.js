@@ -13,6 +13,7 @@ module.exports = {
     "no-console": "off",
     "no-unused-vars": "warn",
     "no-debugger": "off",
-    "no-useless-escape": "off"
+    "no-useless-escape": "off",
+    "no-constant-condition": "off"
   }
 }

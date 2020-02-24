@@ -1,7 +1,7 @@
 <template>
   <div class="set-view">
     <p>This is a set view.</p>
-    <button @click="generateSet">
+    <button @click="generateSet({ heroes: 5, villages: 13, monsterValue: 10, thunderstoneBearers: 3 })">
       Generate
     </button>
   </div>
@@ -9,6 +9,9 @@
 
 <script>
   import { cards } from "../assets/cards.js";
+  // TODO: Instead of total monster levels, maybe we do total monster health.
+  // TODO: Also, what about total cost of villages and/or heroes?
+  // TODO: For that matter, what about total gold value vs total gold cost? That could be a good metric.
 
   const component = {
     props: {
@@ -27,38 +30,59 @@
       this.generateSet({
         heroes: 5,
         villages: 13,
-        monsterValue: 10
+        monsterValue: 10,
+        thunderstoneBearers: 3
       });
     },
     methods: {
       generateSet (config) {
+        const runningList = [];
+
         const heroes = [];
         const villages = [];
         const monsters = [];
-        // TODO: I need to filter out thunderstone bearers
+        const thunderstoneBearers = [];
+        // TODO: Make sure we don't get repeats
+        // TODO: Add in a comparison to increase quality
 
-        for (;heroes.length < config.heroes || villages.length < config.villages || this.monsterStrength(monsters) < config.monsterValue;) {
-          if (this.monsterStrength(monsters) >= config.monsterValue) {
-            console.log("this.monsterStrength(monsters): ", this.monsterStrength(monsters));
-          }
-
+        for (;heroes.length < config.heroes ||
+              villages.length < config.villages ||
+              this.monsterStrength(monsters) < config.monsterValue ||
+              thunderstoneBearers.length < config.thunderstoneBearers
+              ;) {
           const randomDeck = this.randomSeed();
 
-          if (randomDeck.heroGroup && heroes.length < config.heroes) {
+          if (this.isHero(randomDeck) && heroes.length < config.heroes) {
             heroes.push(randomDeck);
-          } else if (randomDeck.monsterGroup && this.monsterStrength(monsters) < config.monsterValue) {
+            runningList.push(randomDeck.title);
+          } else if (this.isThunderstoneBearer(randomDeck) && thunderstoneBearers.length < config.thunderstoneBearers) {
+            thunderstoneBearers.push(randomDeck);
+            runningList.push(randomDeck.title);
+          } else if (this.isMonster(randomDeck) && this.monsterStrength(monsters) < config.monsterValue) {
             monsters.push(randomDeck);
+            runningList.push(randomDeck.title);
           } else if (villages.length < config.villages) {
             villages.push(randomDeck);
+            runningList.push(randomDeck.title);
           }
         }
 
         const set = {
           heroes,
           villages,
-          monsters
+          monsters,
+          thunderstoneBearers
         }
         console.log("set: ", set);
+      },
+      isHero (deck) {
+        return Boolean(deck.heroGroup);
+      },
+      isThunderstoneBearer (deck) {
+        return deck.monsterGroup === "Thunderstone Bearer";
+      },
+      isMonster (deck) {
+        return Boolean(deck.monsterGroup);
       },
       monsterStrength (array) {
         const levels = array.map((monster) => monster.deck[0].level);
@@ -70,10 +94,17 @@
         const branch = startPoint || cards[cardBranches[Math.floor(Math.random() * cardBranches.length)]];
 
         if (branch.heroGroup) {
-          return {...branch, heroGroup: branch.level1.group};
+          return {...branch, heroGroup: branch.level1.group, title: branch.level1.group};
+        } else if (Array.isArray(branch) && branch[0].group && branch[0].group === "Thunderstone Bearer") {
+          return {
+            monsterGroup: branch[0].group,
+            title: branch[0].group,
+            deck: this.randomValue(branch)
+          };
         } else if (Array.isArray(branch) && branch[0].group) {
           return {
             monsterGroup: branch[0].group,
+            title: branch[0].group,
             deck: branch
           };
         } else if (Array.isArray(branch)) {

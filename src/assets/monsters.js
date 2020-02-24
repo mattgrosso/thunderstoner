@@ -10897,6 +10897,7 @@ export const monsters = {
         traits: [
           "Guardian"
         ],
+        level: 0,
         health: 14,
         goldValue: 2,
         globals: [
@@ -10915,6 +10916,7 @@ export const monsters = {
         traits: [
           "Guardian"
         ],
+        level: 0,
         health: 14,
         goldValue: 2,
         globals: [
@@ -10933,6 +10935,7 @@ export const monsters = {
         traits: [
           "Guardian"
         ],
+        level: 0,
         health: 14,
         goldValue: 3,
         globals: [
@@ -10951,6 +10954,7 @@ export const monsters = {
         traits: [
           "Guardian"
         ],
+        level: 0,
         health: 14,
         goldValue: 1,
         globals: [
@@ -10969,6 +10973,7 @@ export const monsters = {
         traits: [
           "Guardian"
         ],
+        level: 0,
         health: 10,
         goldValue: 2,
         specialEffects: [
@@ -10987,6 +10992,7 @@ export const monsters = {
         traits: [
           "Guardian"
         ],
+        level: 0,
         health: 12,
         goldValue: 3,
         globals: [
@@ -11005,6 +11011,7 @@ export const monsters = {
         traits: [
           "Guardian"
         ],
+        level: 0,
         health: 12,
         goldValue: 2,
         globals: [
@@ -11023,6 +11030,7 @@ export const monsters = {
         traits: [
           "Guardian"
         ],
+        level: 0,
         health: 14,
         goldValue: 1,
         breaches: [
@@ -11038,6 +11046,7 @@ export const monsters = {
         traits: [
           "Guardian"
         ],
+        level: 0,
         health: 12,
         goldValue: 2,
         globals: [
@@ -11060,6 +11069,7 @@ export const monsters = {
           "Guardian",
           "Doomknight"
         ],
+        level: 0,
         health: 12,
         goldValue: 1,
         globals: [
